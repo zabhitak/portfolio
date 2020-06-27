@@ -4,6 +4,7 @@ const bodyParser = require('body-parser');
 const nodemailer = require('nodemailer')
 const keys = require('./config/keys');
 const compression = require('compression');
+const helmet = require('helmet');
 
 app = express();
 
@@ -22,6 +23,7 @@ app.use(bodyParser.urlencoded({extended: true}))
 // }
 app.use(express.static('public'));
 app.use(compression());
+app.use(helmet());
 
 
 app.get('/', (req, res) => {
