@@ -3,6 +3,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const nodemailer = require('nodemailer')
 const keys = require('./config/keys');
+const compression = require('compression');
 
 app = express();
 
@@ -20,6 +21,8 @@ app.use(bodyParser.urlencoded({extended: true}))
 // });
 // }
 app.use(express.static('public'));
+app.use(compression());
+
 
 app.get('/', (req, res) => {
   res.render('index');
