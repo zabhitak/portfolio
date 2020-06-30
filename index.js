@@ -1,7 +1,6 @@
-// require('dotenv').config();
 const express = require('express');
 const bodyParser = require('body-parser');
-const nodemailer = require('nodemailer')
+const nodemailer = require('nodemailer');
 const keys = require('./config/keys');
 const compression = require('compression');
 const helmet = require('helmet');
@@ -11,16 +10,6 @@ app = express();
 app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({extended: true}))
 
-// if(process.env.NODE_ENV === 'production'){
-// app.use(express.static('build'));
-
-//   // Express will serve up the index.html file
-// // if it doesn't recognize the route
-// const path = require('path');
-// app.get('*', (req, res) => {
-//   res.sendFile(path.resolve(__dirname, 'build', 'index.html'));
-// });
-// }
 app.use(express.static('public'));
 app.use(compression());
 app.use(helmet());
@@ -104,5 +93,5 @@ app.get('/about', (req, res) => {
   res.render('about');
 });
 
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 8000;
 app.listen(port, () => console.log(`Server started at port ${port}`));
