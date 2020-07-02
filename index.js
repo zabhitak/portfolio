@@ -19,17 +19,6 @@ app.get('/', (req, res) => {
   res.render('index');
 });
 
-app.get('/abhinav', (req, res) => {
-  res.render('abhinav');
-});
-
-app.get('/bhavya', (req, res) => {
-  res.render('bhavya');
-});
-
-app.get('/blog', (req, res) => {
-  res.render('blog');
-});
 
 app.get('/contact', (req, res) => {
   res.render('contact');
@@ -69,25 +58,13 @@ app.get('/gallery', (req, res) => {
   res.render('gallery');
 });
 
-app.get('/guneet', (req, res) => {
-  res.render('guneet');
-});
 
-app.get('/kunal', (req, res) => {
-  res.render('kunal');
-});
 
 app.get('/portfolio', (req, res) => {
   res.render('portfolio');
 });
 
-app.get('/tanishq', (req, res) => {
-  res.render('tanishq');
-});
 
-app.get('/utkrisht', (req, res) => {
-  res.render('utkrisht');
-});
 
 app.get('/about', (req, res) => {
   res.render('about');
