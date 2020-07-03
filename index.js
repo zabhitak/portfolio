@@ -42,17 +42,11 @@ app.post('/contact', (req, res) => {
   }
   smtpTrans.sendMail(mailOpts, (error, response) => {
     if (error) {
-      res.render('blog') // Show a page indicating failure
-    }
-    else {
-      res.render('kunal') // Show a page indicating success
+      res.render('contact') 
     }
   })
 });
 
-app.get('/email/sent', (req, res) => {
-  res.render('emailMessage');
-});
 
 app.get('/gallery', (req, res) => {
   res.render('gallery');
