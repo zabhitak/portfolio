@@ -76,6 +76,10 @@ body {
   font-family: 'Open Sans', sans-serif;
 }
 
+.comic-sans-font {
+  font-family: "Comic Sans MS", cursive,  sans-serif;
+}
+
 hr.separator {
   border-top: 1px solid #252525;
   margin: 70px auto 55px;
