@@ -3,7 +3,8 @@
     <i>Everything you want to know about me -</i>
     <br target="_blank">https://www.zabhitak.tech/<br>
     </div>
-    <p align ="center">
-    <img src="abhi.gif">
-    <sub><sup>© 2020 Abhinav Portfolio, licensed under the <a href="./LICENSE">MIT License</a>.</sup></sub>
-    </p>
+   <p align="center">
+ <img src="https://github.com/zabhitak/portfolio_node/blob/master/abhi.gif" align="center" alt=""/>
+</p>
+    <!-- <sub><sup>© 2020 Abhinav Portfolio, licensed under the <a href="./LICENSE">MIT License</a>.</sup></sub> -->
+
