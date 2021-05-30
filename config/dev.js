@@ -1,7 +1,7 @@
 
 module.exports = {
     GMAIL_USER:'zabhi1292@gmail.com',
-    GMAIL_PASS:'zabhitak15'
+    GMAIL_PASS:'dmdolkgbygpxhlnk'
 };
 
 //mongodb+srv://zabhitak:zabhitak@cluster0-ikcgk.mongodb.net/Cluster0?retryWrites=true&w=majority
