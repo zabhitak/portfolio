@@ -1,9 +1,10 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const nodemailer = require('nodemailer');
-const keys = require('./config/keys');
 const compression = require('compression');
 const helmet = require('helmet');
+const dotenv = require('dotenv');
+dotenv.config();
 
 app = express();
 
@@ -30,13 +31,13 @@ app.post('/contact', (req, res) => {
     port: 465,
     secure: true,
     auth: {
-      user: keys.GMAIL_USER,
-      pass: keys.GMAIL_PASS
+      user: process.env.GMAIL_USER,
+      pass: process.env.GMAIL_PASS
     }
   })
   const mailOpts = {
     from: req.body.email,
-    to: keys.GMAIL_USER,
+    to: process.env.GMAIL_USER,
     subject: 'PortFolio',
     text: `Heyy Abhinav, I am ${req.body.name} (${req.body.email}) this side ,just go through your Portfolio and wanna say: ${req.body.message}`
   }
@@ -52,12 +53,12 @@ app.post('/contact', (req, res) => {
     port: 465,
     secure: true,
     auth: {
-      user: keys.GMAIL_USER,
-      pass: keys.GMAIL_PASS
+      user: process.env.GMAIL_USER,
+      pass: process.env.GMAIL_PASS
     }
   })
   const mailOpts1 = {
-    from: keys.GMAIL_USER,
+    from: process.env.GMAIL_USER,
     to: req.body.email,
     subject: 'PortFolio',
     text: `Heyy ${req.body.name}, I am Abhinav this side, thankyou for going through my portfolio and I will surely revert back you if there is any query `
